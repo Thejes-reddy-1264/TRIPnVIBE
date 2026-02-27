@@ -1,0 +1,17 @@
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.env
+.venv
+env/
+.idea/
+.vscode/
+flutter.zip
+flutter/
+build/
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.DS_Store

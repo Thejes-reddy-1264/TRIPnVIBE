@@ -1,0 +1,9 @@
+from app.db.base_class import Base  # noqa
+from app.models.user import User  # noqa
+from app.models.trip import Trip  # noqa
+from app.models.location import Location  # noqa
+from app.models.route import Route  # noqa
+from app.models.booking import Booking  # noqa
+from app.models.payment import Payment  # noqa
+from app.models.invoice import Invoice  # noqa
+from app.models.cancellation import Cancellation  # noqa
