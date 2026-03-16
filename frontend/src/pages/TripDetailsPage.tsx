@@ -77,7 +77,7 @@ const TripDetailsPage: React.FC = () => {
                             <div style={{ flex: 1, position: 'relative', background: '#e0e0e0', zIndex: 0 }}>
                                 {positions.length > 0 ? (
                                     <MapContainer center={positions[0]} zoom={8} style={{ height: '100%', width: '100%' }} zoomControl={false}>
-                                        <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" attribution="&copy; OpenStreetMap contributors" />
+                                        <TileLayer url="https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}" attribution="&copy; Google Maps" />
                                         {routes.map((route, idx) => route.location && (
                                             <Marker key={route.id} position={[route.location.lat, route.location.lng]}>
                                                 <Popup >

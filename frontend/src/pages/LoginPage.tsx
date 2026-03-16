@@ -52,14 +52,12 @@ const LoginPage: React.FC = () => {
     return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '24px' }}>
 
-            {/* Background Decor */}
-            <div style={{ position: 'absolute', top: '-10%', left: '-10%', width: '500px', height: '500px', background: 'var(--accent-solid)', filter: 'blur(200px)', opacity: 0.15, borderRadius: '50%' }} />
-            <div style={{ position: 'absolute', bottom: '-10%', right: '-10%', width: '600px', height: '600px', background: '#FF9933', filter: 'blur(250px)', opacity: 0.1, borderRadius: '50%' }} />
+            {/* Background Decor Removed */}
 
             <div className="glass-card animate-fade-in" style={{ width: '100%', maxWidth: '420px', position: 'relative', zIndex: 10 }}>
                 <div style={{ textAlign: 'center', marginBottom: '32px' }}>
                     <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
-                        <div style={{ background: 'var(--bg-glass)', padding: '16px', borderRadius: '50%', boxShadow: '0 0 20px rgba(255, 51, 102, 0.2)' }}>
+                        <div style={{ background: 'var(--bg-glass)', padding: '16px', borderRadius: '50%', border: '1px solid var(--border-color)', boxShadow: 'var(--shadow-sm)' }}>
                             <MapPin size={32} color="var(--accent-solid)" />
                         </div>
                     </div>
@@ -69,7 +67,7 @@ const LoginPage: React.FC = () => {
 
                 <form onSubmit={handleSubmit}>
                     {errorMsg && (
-                        <div style={{ padding: '12px', background: 'rgba(255,51,102,0.1)', color: 'var(--accent-solid)', borderRadius: '8px', marginBottom: '16px', fontSize: '0.9rem', textAlign: 'center' }}>
+                        <div style={{ padding: '12px', background: '#fee2e2', color: '#dc2626', border: '1px solid #fecaca', borderRadius: '8px', marginBottom: '16px', fontSize: '0.9rem', textAlign: 'center' }}>
                             {errorMsg}
                         </div>
                     )}

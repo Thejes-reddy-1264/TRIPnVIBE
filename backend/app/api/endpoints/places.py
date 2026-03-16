@@ -17,6 +17,20 @@ async def search_places(
     results = await google_maps.search_places(query)
     return results
 
+@router.get("/geocode", response_model=Dict)
+async def geocode_place(
+    name: str = Query(..., min_length=2, description="Place name to geocode"),
+    current_user: User = Depends(deps.get_current_active_user),
+) -> Any:
+    """
+    Convert a place name to lat/lng using Google Geocoding API.
+    Returns {"lat": ..., "lng": ..., "name": ...}
+    """
+    coords = google_maps.geocode_location(name)
+    if not coords:
+        raise HTTPException(status_code=404, detail=f"Could not geocode location: {name}")
+    return {"lat": coords[0], "lng": coords[1], "name": name}
+
 @router.get("/{place_id}", response_model=Dict)
 async def get_place_details(
     place_id: str,

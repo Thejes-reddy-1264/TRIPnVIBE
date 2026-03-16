@@ -100,7 +100,7 @@ const DashboardPage: React.FC = () => {
                                         {trip.start_date} to {trip.end_date}
                                     </p>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                        <span style={{ padding: '4px 12px', background: 'rgba(255,51,102,0.1)', color: 'var(--accent-solid)', borderRadius: '12px', fontSize: '0.8rem' }}>
+                                        <span style={{ padding: '4px 12px', background: 'rgba(37, 99, 235, 0.1)', color: 'var(--accent-solid)', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 500 }}>
                                             {trip.status}
                                         </span>
                                         <button
